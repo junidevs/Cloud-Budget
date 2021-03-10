@@ -3,6 +3,7 @@ $mainColor: #D52047;
 $secondaryColor:#EE3D1B;
 $mainFont:'Lato', sans-serif;
 $promote_Sqare_Color:#ED4C5C;
+
 @mixin gradient_Background {
     background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%);;
 }
@@ -12,7 +13,8 @@ $promote_Sqare_Color:#ED4C5C;
 *::after {
   box-sizing: border-box;
 }
-body{
+body,html{
+  max-width:100vw;
  margin: 0%;
  padding: 0%;
  box-sizing: border-box;
@@ -566,6 +568,66 @@ color: #000000;
 /* Mobile*/
 
 @media only screen  and (max-width: 1060px) {
+  .content_Container{
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+       text-align:center;
+    
+    .main_Title{
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: bold;
+      font-size:6vw;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: white;
+      width: 100vw;
+      text-align:center;
+      margin-top: 0px;
+
+    }
+    .main_Title::selection{
+         background:$mainColor;
+    }
+    .main_Descritpion{
+     
+      width: 80vw;
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size:20px;
+      line-height: 36px;
+      text-align: center;
+      color: white;
+
+
+    }
+    input[type=submit]{
+      margin-top: 30px;
+      background: #FFFFFF;
+      border-radius: 6px;
+      width: 160px;
+      height: 50px;
+      border: none;
+      font-family:$mainFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: $secondaryColor;
+    }
+}
+
+
+
   .tech_Title{
     margin-top: 120px;
   }
@@ -675,12 +737,13 @@ color: #000000;
         background-color:rgba(213, 32, 71, 0);
         overflow: hidden;
         .logo_square{
-            width:70vw;
+            width:100vw;
             height: 10vh;
-        
+            box-sizing: border-box;
+            padding-left: 12.5%;
             float: left;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             flex-direction: row;
             .cloud_Icon{
