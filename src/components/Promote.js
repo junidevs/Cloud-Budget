@@ -9,7 +9,7 @@ import rightImagePromote from '../styles/images/rightImagePromote.png';
 const  Promote = () => {
     return (
         <>
-            <div className="promote_Contaier">
+            <div id="prom_Cont" className="promote_Contaier">
                   <div className="promote_Left_Bar">
                     <h2 className="promote_H2">Stay focused on saving money</h2>
                     <h4 className="promote_H4">

@@ -19,7 +19,7 @@ const styles = {
 const Technology = ()=> {
    
     return (
-        <Container>
+        <Container id="tech_Container">
             <h2 className="tech_Title">Technology</h2>  
           <div className="tech_Container">
                     

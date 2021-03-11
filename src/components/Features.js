@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import firstAd from '../styles/images/firstAd.png';
 import secondAd from '../styles/images/secondAd.png';
 import thirdAd from '../styles/images/thirdAd.png';
+
 //insted of define new class I created a simple wrapper to wrap h2 
 //and three boxes in one insted of define h2 outside
    
@@ -13,11 +14,12 @@ const Container =styled.div`
     justify-content:center;
     background-color:#FAFAFA;
     `
-const Features = ()=> {
+const Features = (props)=> {
     return (
-        <Container>
+      
+        <Container id="feature_Cont">
         <h2 className="features_Title">Features</h2>  
-          <div className="features_Container">  
+          <div id={props.FeaturesID}  className="features_Container">  
             
                  <div className="add_Box">
                     <img className="addImage" src={firstAd} alt="advertBox" />
@@ -65,6 +67,7 @@ const Features = ()=> {
 
           </div>
           </Container> 
+      
     )
 }
 export default Features;

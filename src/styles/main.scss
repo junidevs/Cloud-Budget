@@ -8,11 +8,14 @@ $promote_Sqare_Color:#ED4C5C;
     background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%);;
 }
 
+/*Reset styles*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+
 body,html{
   max-width:100vw;
  margin: 0%;
@@ -20,9 +23,11 @@ body,html{
  box-sizing: border-box;
  font-family:$mainFont;
  overflow-x: hidden;
+ background-color:#FAFAFA;
+
 
 }
-
+/*Styles for Main Component Called MainPage*/
 .main_Background_Container{
     position: relative;
     left: 0%;
@@ -30,7 +35,7 @@ body,html{
     height: 100vh;
     width: 100vw;
     float: left;
-    
+
     .overlay_Background{
         position: absolute;
         left: 0%;
@@ -53,7 +58,11 @@ body,html{
         background-attachment: fixed;
     }
 }
+/*END----------------Styles for MainPage Component Called MainPage*/
 
+
+
+/*Styles for Navigation Component Called Nav*/
 .navigation_Container{
     width: 100vw;
     height: 10vh;
@@ -97,12 +106,12 @@ body,html{
             justify-content: center;
             align-items: center;
             flex-direction: row;
-            width: 50vw;
+            width: 80vw;
             list-style-type: none;
         
 
             .item_list{
-                float:left;
+                float:left;           
                 margin:0px 1.6vw;
                 font-weight: bold;
                 font-size: 14px;
@@ -113,11 +122,12 @@ body,html{
                   color: white;
                   text-decoration: none;
                   transition: all 300ms ease;
-                }
-                .navLinks:hover{
-                 text-shadow: 2px 2px 2px black;
-                }
-            }
+                  outline: none;
+                  &:hover{
+                    text-shadow: 2px 2px 2px black;
+                   }
+                }   
+               }
         }
         .burger_Box{
             display: none;
@@ -127,7 +137,9 @@ body,html{
         display: none;
     }
 }
+/*END----------------Styles for Navigation Component Called Nav*/
 
+/*Styles for main Page Component called MainContent*/
 .content_Container{
     width: 100vw;
     height: 90vh;
@@ -152,11 +164,11 @@ body,html{
       width: 80vw;
       text-align:center;
       margin-top: -50px;
-
+      &::selection{
+        background:$mainColor;
+   }
     }
-    .main_Title::selection{
-         background:$mainColor;
-    }
+   
     .main_Descritpion{
      
       width: 80vw;
@@ -185,6 +197,12 @@ body,html{
       color: $secondaryColor;
     }
 }
+
+
+/*END----------------Styles for MainContent Component Called MainContent*/
+
+
+/*Styles for features Component Called features*/
 
 .features_Container{
   width: 100vw;
@@ -278,6 +296,12 @@ line-height: 43px;
 text-align: center;
 color: #000000;
 }
+
+/*END----------------Styles for Features Component Called Features*/
+
+
+
+/*Styles for Tech Component Called Tech*/
 .tech_Container{
   width: 100vw;
   height: 55vh;
@@ -347,6 +371,12 @@ color: #000000;
   }
  
 }
+
+/*END----------------Styles for Tech Component Called Tech*/
+
+
+
+/*Styles for Tech Component Called Promote*/
 .promote_Contaier{
   width: 100vw;
   height: 50vh;
@@ -363,8 +393,9 @@ color: #000000;
     align-items: flex-start;
     float: left;
     box-sizing: border-box;
-    padding-left: 165px;
+    padding-left: 10vw;
     padding-right: 81px;
+    z-index: 9999;
     background-color:$promote_Sqare_Color;
     .promote_H2{
       width: 445px;
@@ -410,18 +441,19 @@ color: #000000;
     justify-content: center;
     align-items: center;
     float: left;
-    background-color: $promote_Sqare_Color;
+    background-color:$promote_Sqare_Color;
     .images_Promote_Square{
       position: relative;
     
       width: 533px;
       height: 311px;
       box-sizing:border-box;
-      margin-right: 216px;
+      margin-right: 0px;
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
+    
       .left_Image_Promote{
         width: 383px;
         height: 267px;
@@ -449,10 +481,13 @@ color: #000000;
         z-index: 99;
       }
     }
-  }
+  }}
+
+  /*END----------------Styles for Promote Component Called Promote*/
+
 
   
-}
+  /*Styles for Contact Component Called Contact*/
 .contact_Contaier{
   width: 100vw;
   height: 50vh;
@@ -460,6 +495,7 @@ color: #000000;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-color: white;
   .contact_Left_Bar{
     width: 50vw;
     height: 50vh;
@@ -469,7 +505,7 @@ color: #000000;
     align-items: flex-start;
        box-sizing: border-box;
        padding-top: 117px;
-      padding-left: 176px;
+      padding-left:10vw;
     float: left;
     .contact_H2{
       width: 445px;
@@ -546,11 +582,16 @@ color: #000000;
     }
    .contact_button{
      margin-top: 27px;
-    width: 540px;
-    height: 60px;
+     width: 540px;
+     height: 60px;
+    
+     .button_Submit:disabled {
+      background-color:#b13844;
+    }
     .button_Submit{
       width: 160px;
       height: 50px;
+      transition:all 300ms ease-in-out;
       background:$promote_Sqare_Color;
       border: 1.5px solid $promote_Sqare_Color;
       box-sizing: border-box;
@@ -561,11 +602,44 @@ color: #000000;
       font-size: 14px;
       line-height: 17px;
       color: #FFFFFF;
+      outline: none;
+      &:hover{
+        cursor: pointer;
+      }
     }
+   
    }
   }
 }
-/* Mobile*/
+  /*END-------------------Styles for Contact Component Called Contact*/
+.orders_Container{
+  box-sizing: border-box;
+  padding: 10px;
+  font-family: $mainFont;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  z-index: 9999999999;
+  background: linear-gradient(90deg, rgba(213, 32, 71, 1) 0%, rgba(238, 61, 27, 1) 100%);;
+  color: white;
+  text-shadow:2px 2px 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .order_requests{
+    font-size: 60px;
+    letter-spacing:4px;
+    text-shadow: 3px 3px 5px black;
+  }
+  h2,h3{
+    box-sizing: border-box;
+    padding: 5px;
+  }
+}
+/* Mobile tablets etc.*/
 
 @media only screen  and (max-width: 1060px) {
   .content_Container{
@@ -625,10 +699,7 @@ color: #000000;
       color: $secondaryColor;
     }
 }
-
-
-
-  .tech_Title{
+    .tech_Title{
     margin-top: 120px;
   }
   .tech_Container{
@@ -658,9 +729,7 @@ color: #000000;
       margin:10px;
       transition: all 300ms ease;
        
-      .tech_NumberH3{
-  
-      
+      .tech_NumberH3{ 
         width: 217px;
         height: 120px;
         font-family: $mainFont;
@@ -679,9 +748,7 @@ color: #000000;
         color: #101010;
         font-family: $mainFont;
         font-style: normal;
-        font-weight: bold;
-  
-    
+        font-weight: bold; 
       }
       .tech_P{
         margin-top: -5px;
@@ -692,13 +759,9 @@ color: #000000;
         line-height: 14px;
         text-align: center;  
         color: #000000;
-  
-  
       }
-    
     }
   }
-  
     .tech_ImgVector{
       position: absolute;
       top: 34%;
@@ -727,10 +790,8 @@ color: #000000;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
-    
+    position: relative; 
   }
-
     .navigation_Container{
         width: 100vw;
         height: 10vh;
@@ -784,9 +845,8 @@ color: #000000;
                    margin:30px -10vw;
                    font-weight: bold;
                    font-size: 14px;
-                   line-height: 27px;
-                   
-            }
+                   line-height: 27px;                     
+            }            
             }
             .ul_mobile{
                 box-sizing: border-box;
@@ -799,21 +859,18 @@ color: #000000;
                 transform: translate(-50%, -50%);
                 z-index: 9999;
                 background-color: #D52047;
-                padding-top: 30%;
-           
-           
+                padding-top: 30%;           
             }
             .burger_Box{
                 display: flex;
                 width: 50px;
-                height: 50px;
-               
+                height: 50px;             
                 margin-right: 0px;
                 margin-top:0px;
                 transform: rotate(90deg);
                 z-index: 99999;
                 position:absolute;
-               
+
                 .slideBurger{
                     width:40px;     
                     background-color: #ff3863;
@@ -869,21 +926,17 @@ color: #000000;
                 content: "";
                 transition: all .2s ease-in-out;
             }
-          }
-         
-      }
-      
+          }       
+      } 
       input[type=checkbox] {
         display: none;
         position: fixed;
         z-index: 999999;
         right: 0%;
         top: 0%;
-      }
-      
+      }  
       input[type=checkbox]:checked ~ #overlay {
         visibility: visible;
-
       }
       
       input[type=checkbox]:checked ~ #overlay-button {
@@ -912,7 +965,8 @@ color: #000000;
         background: linear-gradient(146deg, rgba(213,32,71,1) 0%, rgba(238,61,27,1) 100%); 
         z-index: 99999;
         visibility: hidden;
-      
+        letter-spacing: 7px;
+        overflow-y:hidden;
         position: fixed;
         &.active {
           visibility: visible;
@@ -926,21 +980,25 @@ color: #000000;
           height: 100vh;
           padding-left: 0;
           list-style-type: none;
+          
           .item_list {
             padding:1em;
             color: white;
             font-weight: bold;
+    
             a {
               color: white;
               text-decoration: none;
               font-size: 1.5em;
+              transition:text-shadow 200ms ease-in-out;
+
               &:hover {
-                color: black;
+                
+                text-shadow: 4px 5px 2px black;
               }
             }
           }
         }
-      
       }
       .promote_Contaier{
         width: 100vw;
@@ -975,7 +1033,7 @@ color: #000000;
             color: #FFFFFF;
           }
           .promote_H4{
-            width: 90vw;
+            width: 70vw;
             height: 64px;
             font-family:$mainFont;
             font-style: normal;
@@ -998,9 +1056,7 @@ color: #000000;
              .icon_Promote_Vectors:last-child{
                margin-top: 5px;
              }
-          }
-          
-      
+          }  
         }
         .promote_Right_Bar{
           width: 100vw;
@@ -1011,52 +1067,50 @@ color: #000000;
           align-items: center;
           float: left;
           background-color: $promote_Sqare_Color;
+         
           .images_Promote_Square{
             position: relative;
             width: 100vw;
             height: 311px;
             box-sizing:border-box;
-            margin-right: 0px;
+            margin-right:auto;
+            margin-left:auto;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left:0px;
+            padding-right:0px;
 
             .left_Image_Promote{
-              width:143px;
+              width: 30vw;
               height: 267px;
               border-radius: 15px;
               position: absolute;
-              left: 0%;
+              left: 15%;
               top: 0%;
+           
               z-index: 1;
               object-fit: contain;
+              
             }
             .right_Image_Promote{
-              width: 143px;
+              width: 30vw;
                 height: 267px;
                 border-radius: 15px;
               position: absolute;
-              right: 0%;
+              right: 15%;
               top: 0%;
               z-index: 1;
               object-fit: contain;
             }
             .main_Image_Promote{
-              width: 80vw;
-              height: 311px;    
-              position: absolute;
-              left: 9%;
-              top: -7%;
-              z-index: 99;
-              object-fit: contain;
+              width: 85vw;
+              height: 311px;  
+              object-fit: contain; 
             }
           }
-        }
-      
-        
+        }       
       }
       .contact_Contaier{
         width: 100vw;
@@ -1144,11 +1198,11 @@ color: #000000;
             -o-appearance: none;
             appearance: none;
             background-image: url('../styles/icons/arrowIcon.png');
-        background-position: 98% center;
-        background-repeat: no-repeat;
-        outline: none;
-        color: grey;
-        padding: 21px 23px 20px 31px;
+            background-position: 98% center;
+            background-repeat: no-repeat;
+            outline: none;
+            color: grey;
+            padding: 21px 23px 20px 31px;
           }
           
           select::-ms-expand {
