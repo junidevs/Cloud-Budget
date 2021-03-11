@@ -22,6 +22,7 @@ export default function Orders() {
           <h2>Requester: {name} {lastname}</h2>
           <h3>Phone:{number}</h3>
           <h3>Service type:{service}</h3>
+          <h3>State:Work in progres...</h3>
           <h5>*In case of urgent help please contact with our support team</h5>
         </div>
         </>
