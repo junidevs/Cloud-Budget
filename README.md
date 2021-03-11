@@ -4,10 +4,10 @@ CloudBudgets
 Link:[https://cloudbudgets.netlify.app/](https://cloudbudgets.netlify.app/).
 
 Project has been created with :<br>
-  create-react-app<br>
-  pure scss without any css framework <br>
-  html5 and css3 has been used as well<br>
-  scroll to particural section has been implemented but I think there is the better way than write four functions<br>
+  -create-react-app<br>
+  -pure scss without any css framework <br>
+  -html5 and css3 has been used as well<br>
+  -scroll to particural section has been implemented but I think there is the better way than write four functions<br>
 
 Additional Options over project requirement:<br>
 
